@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#main {
+  width: 100%;
+}
+
+#loader {
+  /* display: none; */
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  height: 100vh;
+  background-color: #333;
+  color: white;
+}
+
+#loader #topheading {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+#topheading h5 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 300;
+}
+
+#loader h1 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4vh;
+  font-weight: 500;
+}
+
+.reveal .parent {
+  display: block;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.reveal .parent .child {
+  display: block;
+}
+.parent .child span {
+  display: inline-block;
+}
+#green {
+  /* display: none; */
+  position: absolute;
+  top: 100%;
+  z-index: 999;
+  width: 100%;
+  height: 0vh;
+  background-color: green;
+}
+
+#Home {
+  width: 100%;
+  height: 210vh;
+  background-color: #f0f0f0;
+}
+#Home #nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5vw;
+  width: 100%;
+  height: 100px;
+}
+
+#nav a {
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 12px;
+  color: black;
+}
+
+#nav a .line {
+  position: absolute;
+  bottom: 0;
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  background-color: black;
+}
+
+#line1 {
+  left: 0;
+  width: 0%;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+  transition-delay: 0.1s;
+}
+#line2 {
+  right: 0;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+  width: 100%;
+}
+
+#nav a:hover #line1 {
+  width: 100%;
+}
+#nav a:hover #line2 {
+  width: 0%;
+}
+
+.row {
+  margin-top: 5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: #333;
+  padding: 0 7vw;
+  line-height: 1;
+  padding-right: 12vw;
+}
+
+.row h1 {
+  font-size: 11vw;
+  font-weight: 600;
+}
+
+.row .text {
+  margin-top: 0vw;
+}
+
+.row h5 {
+  opacity: 0.6;
+  font-size: 11px;
+  font-weight: 600;
+}
+.row img {
+  margin-top: 20px;
+
+  width: 10%;
+  height: 70px;
+}
+
+.row:nth-child(3) {
+  margin-top: 0;
+}
+
+.row svg {
+  height: 130px;
+  margin: 0 4vw;
+}
+
+path,
+polyline {
+  stroke: #14cf93;
+}
+
+#imagery {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 18vw;
+  padding: 5vw 7vw;
+  margin-top: 20vw;
+}
+
+#imagery #imgleft {
+  width: 30%;
+  height: auto;
+}
+
+#imgleft h1 {
+  font-size: 2vw;
+  font-weight: 600;
+  color: #333;
+}
+
+#imgright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 60%;
+  height: 300px;
+}
+
+#imgright #cntnr {
+  position: absolute;
+  border-radius: 1vw;
+  width: 30vw;
+  height: 45vw;
+  filter: grayscale();
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1.2s;
+}
+#imgright #cntnr:hover {
+  filter: grayscale(0);
+}
+
+#imgright #cntnr:nth-child(1) {
+  transform: translate(-40%, -8%) rotate(-20deg);
+  background-image: url(https://images.unsplash.com/photo-1705418588262-086688bd4321?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cG9ydHJhaXQlMjBzbWlsZXxlbnwwfHwwfHx8MA%3D%3D);
+
+  background-size: cover;
+  background-position: center;
+}
+
+#imgright #cntnr:nth-child(2) {
+  transform: translate(-15%, 0%) rotate(-15deg);
+  background-image: url(https://images.unsplash.com/photo-1579105728744-9d6b14a45389?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHBvcnRyYWl0JTIwc21pbGV8ZW58MHx8MHx8fDA%3D);
+  background-size: cover;
+  background-position: center;
+}
+
+#imgright #cntnr:nth-child(3) {
+  transform: translate(20%, 10%) rotate(-5deg);
+  background-image: url(https://images.unsplash.com/photo-1578774296842-c45e472b3028?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHBvcnRyYWl0JTIwc21pbGV8ZW58MHx8MHx8fDA%3D);
+
+  background-size: cover;
+  background-position: center;
+}
+
+
+
